@@ -1,0 +1,148 @@
+- Generics in Java is a powerful feature introduced in JDK 5 that allows developers to write reusable and type-safe code. 
+- It enables classes, interfaces, and methods to operate on parameters of various types while providing compile-time type 
+  checking.
+  
+Why Use Generics?
+-----------------
+- Type Safety: Generics enforce type checking at compile-time, reducing runtime errors.
+- Code Reusability: They allow writing generic code that works with any data type.
+- Avoid Casting: With generics, there's no need to cast objects when retrieving them from a collection.
+
+Advantages of Generics:
+-----------------------
+- Compile-Time Type Checking: Prevents runtime ClassCastException.
+- Code Reusability: Same code works with different data types.
+- Improved Performance: Reduces the overhead of type casting.
+
+Generic Restrictions:
+---------------------
+- No Primitive Types: Generics work only with reference types. Use wrapper classes like Integer for int.
+- Type Erasure: Type information is removed at runtime, so you can't use generics with reflection or create 
+  instances of generic types directly.
+- No Static Context: Generic type parameters cannot be used in static fields or methods.
+
+Declaring Generics:
+-------------------
+- Generics use type parameters, typically written as a single uppercase letter:
+
+ <T>: Type
+ <E>: Element (used in collections)
+ <K> and <V>: Key and Value (used in maps)
+ 
+ // Define a generic class
+public class Box<T> {
+    private T content;
+
+    public void setContent(T content) {
+        this.content = content;
+    }
+
+    public T getContent() {
+        return content;
+    }
+}
+
+// Use the generic class
+public class Main {
+    public static void main(String[] args) {
+        Box<String> stringBox = new Box<>();
+        stringBox.setContent("Hello, Generics!");
+        System.out.println("String Content: " + stringBox.getContent());
+
+        Box<Integer> integerBox = new Box<>();
+        integerBox.setContent(123);
+        System.out.println("Integer Content: " + integerBox.getContent());
+    }
+}
+===============================================================================================
+Generic Methods:
+----------------
+- we can declare methods with type parameters, independent of whether the class itself is generic.
+
+public class Utility {
+    // Generic method
+    public static <T> void printArray(T[] array) {
+        for (T element : array) {
+            System.out.println(element);
+        }
+    }
+
+    public static void main(String[] args) {
+        Integer[] intArray = {1, 2, 3};
+        String[] strArray = {"A", "B", "C"};
+
+        printArray(intArray); // Works with Integer
+        printArray(strArray); // Works with String
+    }
+}
+==================================================================================================
+Bounded Type Parameters:
+------------------------
+- we can restrict the types that can be used as type arguments using bounds.
+
+1. Upper Bound (extends): The type must be a subclass of a specific class or implement an interface.
+
+public class NumberBox<T extends Number> {
+    private T number;
+
+    public void setNumber(T number) {
+        this.number = number;
+    }
+
+    public double getDoubleValue() {
+        return number.doubleValue();
+    }
+}
+
+2. Multiple Bounds: A type parameter can have multiple bounds.
+public <T extends Number & Comparable<T>> void process(T value) {
+    System.out.println("Value: " + value);
+}
+============================================================================================================
+Wildcards:
+------------
+- Wildcards (?) provide flexibility in using generics, especially with collections.
+
+1. Unbounded Wildcard (?): Accepts any type.
+public void printList(List<?> list) {
+    for (Object obj : list) {
+        System.out.println(obj);
+    }
+}
+
+2. Upper-Bounded Wildcard (? extends T): Accepts a type that is T or a subclass of T.
+public void processNumbers(List<? extends Number> numbers) {
+    for (Number num : numbers) {
+        System.out.println(num.doubleValue());
+    }
+}
+
+3. Lower-Bounded Wildcard (? super T): Accepts a type that is T or a superclass of T.
+public void addNumbers(List<? super Integer> list) {
+    list.add(10); // Can safely add Integer or its subclass
+}
+==============================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

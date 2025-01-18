@@ -1,0 +1,73 @@
+LinkedHashSet (maintains insertion order):
+------------------------------------------
+- A LinkedHashSet in Java is a subclass of HashSet that maintains the insertion order of elements. 
+- It is part of the java.util package and implements the Set interface. 
+- Internally, it uses a combination of a HashMap and a LinkedList to achieve both uniqueness and order preservation.
+
+Key Features of LinkedHashSet:
+------------------------------
+- Unique Elements: Like all sets, it does not allow duplicate elements.
+- Preserves Insertion Order: Unlike HashSet, it maintains the order in which elements were inserted.
+- Allows Null Value: Permits one null element.
+- Performance: Slightly slower than HashSet due to the overhead of maintaining the insertion order, 
+  but still offers O(1) time complexity for basic operations like add, remove, and contains.
+- Not Synchronized: LinkedHashSet is not thread-safe, but it can be wrapped with Collections.
+  synchronizedSet() for concurrent use.
+  
+Commonly Used Methods:
+----------------------
+Adding Elements:
+- add(E e): Adds an element if it is not already present.
+
+Removing Elements:
+- remove(Object o): Removes the specified element if present.
+- clear(): Removes all elements from the set.
+
+Checking Elements:
+- contains(Object o): Checks if the set contains the specified element.
+- isEmpty(): Checks if the set is empty.
+
+Size:
+- size(): Returns the number of elements in the set.
+
+Iteration:
+- You can iterate over the elements using an Iterator or an enhanced for-each loop.
+================================================================================================================
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetExample {
+    public static void main(String[] args) {
+        // Creating a LinkedHashSet
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        // Adding elements
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Cherry");
+        set.add("Apple"); // Duplicate element, will not be added
+
+        // Displaying the LinkedHashSet
+        System.out.println("LinkedHashSet: " + set);
+
+        // Checking for an element
+        System.out.println("Contains 'Banana': " + set.contains("Banana"));
+
+        // Removing an element
+        set.remove("Cherry");
+        System.out.println("After removal: " + set);
+
+        // Iterating through the LinkedHashSet
+        System.out.println("Iterating through LinkedHashSet:");
+        for (String fruit : set) {
+            System.out.println(fruit);
+        }
+
+        // Checking the size
+        System.out.println("Size: " + set.size());
+
+        // Clearing the LinkedHashSet
+        set.clear();
+        System.out.println("Is LinkedHashSet empty? " + set.isEmpty());
+    }
+}
+====================================================================================================

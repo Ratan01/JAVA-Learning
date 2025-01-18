@@ -1,0 +1,17 @@
+- Generics in Java is a powerful feature introduced in JDK 5 that allows developers to write reusable and type-safe code. 
+- It enables classes, interfaces, and methods to operate on parameters of various types while providing compile-time type 
+  checking.
+  
+Why Use Generics?
+-----------------
+- Type Safety: Generics enforce type checking at compile-time, reducing runtime errors.
+- Code Reusability: They allow writing generic code that works with any data type.
+- Avoid Casting: With generics, there's no need to cast objects when retrieving them from a collection.
+
+Declaring Generics:
+-------------------
+- Generics use type parameters, typically written as a single uppercase letter:
+
+ <T>: Type
+ <E>: Element (used in collections)
+ <K> and <V>: Key and Value (used in maps)

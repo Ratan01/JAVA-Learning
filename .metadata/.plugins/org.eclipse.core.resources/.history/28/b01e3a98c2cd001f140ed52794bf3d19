@@ -1,0 +1,40 @@
+ArrayDeque
+----------
+- An ArrayDeque in Java is a part of the java.util package and implements the Deque interface. 
+- It is a resizable, array-backed implementation of a double-ended queue, allowing elements to be added or 
+  removed from both ends efficiently. 
+- It is also known for its high performance, making it an excellent replacement for both stacks and queues.
+
+Key Features of ArrayDeque:
+--------------------------
+- Double-Ended Queue: Supports adding and removing elements from both ends.
+- Resizable Array: Automatically grows as needed, without the fixed size limitation of arrays.
+- No Null Elements: Does not permit null elements.
+- Fast Operations: Provides O(1) time complexity for adding and removing elements at both ends in most cases.
+- Not Thread-Safe: ArrayDeque is not synchronized, but you can wrap it with Collections.synchronizedDeque() for 
+  thread safety.
+
+Commonly Used Methods:
+---------------------
+Adding Elements:
+- addFirst(E e): Adds an element to the front of the deque.
+- addLast(E e) or add(E e): Adds an element to the end of the deque.
+- offerFirst(E e): Adds an element to the front, returning true if successful.
+- offerLast(E e) or offer(E e): Adds an element to the end, returning true if successful.
+
+Removing Elements:
+- removeFirst(): Removes and returns the first element.
+- removeLast(): Removes and returns the last element.
+- pollFirst(): Retrieves and removes the first element, or returns null if empty.
+- pollLast(): Retrieves and removes the last element, or returns null if empty.
+
+Accessing Elements:
+- getFirst(): Retrieves the first element without removing it.
+- getLast(): Retrieves the last element without removing it.
+- peekFirst(): Retrieves the first element or returns null if empty.
+- peekLast(): Retrieves the last element or returns null if empty.
+
+Other Methods:
+- size(): Returns the number of elements.
+- isEmpty(): Checks if the deque is empty.
+- clear(): Removes all elements.

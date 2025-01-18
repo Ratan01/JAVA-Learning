@@ -1,0 +1,143 @@
+Exception:
+----------
+- Exception in Java refers to an event that disrupts the normal flow of a program's execution. 
+- Exceptions are used to handle errors or unexpected behavior gracefully, allowing the program to continue 
+  running or terminate gracefully instead of crashing.
+  
+Key Concepts in Java Exceptions:
+--------------------------------
+Exception Hierarchy:
+-------------------
+- All exceptions in Java are part of the Throwable class hierarchy.
+
+Throwable has two main subclasses:
+----------------------------------
+- Error: Indicates serious problems that applications should not handle (e.g., OutOfMemoryError, 
+  StackOverflowError).
+-Exception: Represents conditions that a program might want to handle.
+
+Checked vs. Unchecked Exceptions:
+---------------------------------
+Checked Exceptions:
+- Exceptions that must be declared in the method signature using throws or handled using a try-catch block.
+- Examples: IOException, SQLException.
+
+Unchecked Exceptions:
+- Exceptions that do not need to be declared or handled explicitly.
+- Examples: ArithmeticException, NullPointerException.
+
+Common Exception Classes:
+-------------------------
+- ArithmeticException: For illegal arithmetic operations, like division by zero.
+- NullPointerException: When an application tries to use a null object reference.
+- ArrayIndexOutOfBoundsException: When accessing invalid array indices.
+- IOException: For input/output failures.
+
+Exception Handling Mechanisms:
+==============================
+try-catch Block:
+----------------
+- Used to handle exceptions.
+- Code that might throw an exception is placed inside the try block.
+- The catch block handles the exception.
+
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;  // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero: " + e.getMessage());
+        }
+    }
+}
+
+finally Block:
+-------------
+- The finally block contains code that is always executed, regardless of whether an exception occurs or not.
+- Often used for cleanup operations like closing files or releasing resources.
+
+public class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]);  // ArrayIndexOutOfBoundsException
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is out of bounds.");
+        } finally {
+            System.out.println("Execution of finally block.");
+        }
+    }
+}
+
+throws Keyword:
+---------------
+- Used to declare exceptions that a method might throw.
+
+import java.io.*;
+
+public class ThrowsExample {
+    public static void main(String[] args) throws IOException {
+        FileReader file = new FileReader("test.txt");  // Might throw IOException
+        BufferedReader fileInput = new BufferedReader(file);
+
+        System.out.println(fileInput.readLine());
+        fileInput.close();
+    }
+}
+
+throw Keyword:
+-------------
+- Used to explicitly throw an exception.
+
+public class ThrowExample {
+    public static void validateAge(int age) {
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or above.");
+        }
+    }
+
+    public static void main(String[] args) {
+        validateAge(15);  // This will throw IllegalArgumentException
+    }
+}
+
+=======================================================================================================
+
+Custom Exception:
+-----------------
+- A custom exception in Java is a user-defined exception class that extends the Exception or 
+  RuntimeException class. Creating custom exceptions allows you to represent specific error scenarios in 
+  your application, making the code more meaningful, readable, and easier to debug.
+
+example:
+--------
+// Custom checked exception
+class InvalidAgeException extends Exception {
+    // Constructor with custom error message
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class CustomCheckedExceptionExample {
+    public static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above.");
+        } else {
+            System.out.println("Age is valid.");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);  // This will throw InvalidAgeException
+        } catch (InvalidAgeException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
+=====================================================================================================
+
+
+
+

@@ -1,0 +1,9 @@
+ArrayDeque
+----------
+- An ArrayDeque in Java is a part of the java.util package and implements the Deque interface. 
+- It is a resizable, array-backed implementation of a double-ended queue, allowing elements to be added or 
+  removed from both ends efficiently. 
+- It is also known for its high performance, making it an excellent replacement for both stacks and queues.
+
+
+

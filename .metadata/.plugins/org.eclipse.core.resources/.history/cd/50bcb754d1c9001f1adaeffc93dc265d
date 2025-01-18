@@ -1,0 +1,17 @@
+package com.java.rk.collection;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListVsSet {
+	public static void main(String[] args) {
+		List<String> lis = new LinkedList<>();
+		lis.add("Ram");
+		lis.add("Shyam");
+		lis.add("Govind");
+		lis.add("Null");
+		lis.add("Madhao");
+		lis.add("Null");
+		
+	}
+}

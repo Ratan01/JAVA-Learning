@@ -1,0 +1,11 @@
+Method Rules:
+------------
+
+• Methods must have either return type or void but not both.
+• Void method cannot return any data.
+• A method can have only one return type or only one return statement.
+• Return type of method and the returning value must match.
+• Inside a method , return statement must be the last executable statement.
+• A Method gets executed only when we invoke it.
+• A Method can be invoked multiple times .
+• Main method is not required for compilation rather required for execution.

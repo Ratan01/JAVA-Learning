@@ -1,0 +1,12 @@
+Class:
+------
+- It is Logical entity or Blue print using which we can create multiple Object.
+- We cannot create any object without a class.
+- Multiple Object is created inside a class.
+
+Object:
+-------
+- Object is a physical quantity.
+- Object has state and behavior
+- State is property (Data Member)
+- Behavior is Methods.

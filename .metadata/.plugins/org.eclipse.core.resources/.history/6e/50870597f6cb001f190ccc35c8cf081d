@@ -1,0 +1,15 @@
+Vector:
+-------
+- A Vector in Java is a dynamic array-like data structure provided by the java.util package. 
+- It is similar to an ArrayList, but the main difference is that Vector is synchronized, making it thread-safe 
+  for concurrent operations. 
+- However, because of this synchronization, it is generally less efficient than ArrayList for single-threaded scenarios.
+
+Key Features of Vector:
+----------------------
+- Resizable Array: Like ArrayList, Vector dynamically resizes itself when elements are added or removed.
+- Thread-Safe: All methods in Vector are synchronized, making it safe for use in multi-threaded environments.
+- Random Access: Elements can be accessed by index, just like in an array.
+- Allows Duplicates and Nulls: Vector permits duplicate elements and allows null values.
+- Legacy Class: Although still widely used, Vector is considered a legacy class and is often replaced by ArrayList 
+  in modern code.

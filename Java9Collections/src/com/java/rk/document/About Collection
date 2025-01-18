@@ -1,0 +1,46 @@
+In Java, collections are frameworks designed to store, manipulate, and retrieve groups of objects efficiently. 
+The Java Collections Framework (JCF) is part of the java.util package and provides a set of classes and interfaces to 
+handle various types of data structures, such as lists, sets, queues, and maps.
+
+Core Interfaces in the Java Collections Framework
+Collection Interface
+
+Parent interface of most collection classes.
+Common operations: add(), remove(), size(), contains(), etc.
+Subinterfaces:
+List
+Set
+**Queue`
+List Interface
+
+Ordered collection allowing duplicate elements.
+Implementations:
+ArrayList (dynamic array)
+LinkedList (doubly-linked list)
+Vector (legacy, synchronized)
+Stack (LIFO stack)
+Set Interface
+
+Collection with unique elements (no duplicates).
+Implementations:
+HashSet (unordered, uses hashing)
+LinkedHashSet (maintains insertion order)
+TreeSet (sorted set, uses Red-Black Tree)
+Queue Interface
+
+Collection that represents a queue (FIFO or LIFO).
+Subinterfaces: Deque (double-ended queue).
+Implementations:
+PriorityQueue (priority-based retrieval)
+LinkedList (can also act as a queue)
+Map Interface (Not a part of Collection but still part of JCF)
+
+Stores key-value pairs.
+Implementations:
+HashMap (unordered, uses hashing)
+LinkedHashMap (maintains insertion order)
+TreeMap (sorted, uses Red-Black Tree)
+Hashtable (legacy, synchronized)
+Commonly Used Classes
+Collections Class: Provides utility methods like sort(), shuffle(), reverse(), min(), max(), etc.
+Arrays Class: Provides methods to manipulate arrays like asList() and binarySearch().

@@ -1,0 +1,8 @@
+package com.java.rk.hierarchical;
+
+public class Cat {
+    void meow() {
+        System.out.println("The cat meows.");
+    }
+
+}

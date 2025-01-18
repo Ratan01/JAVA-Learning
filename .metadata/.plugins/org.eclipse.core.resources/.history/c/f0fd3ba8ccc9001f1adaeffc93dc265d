@@ -1,0 +1,29 @@
+package com.java.rk.collection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class CollectionMethod {
+	public static void main(String[] args) {
+		Collection<String> cs = new ArrayList<>();
+		cs.add("Ram");
+		cs.add("Shyam");
+		cs.add("BabuRao");
+		cs.add("Apte");
+		Collection<String> ec = new ArrayList<>();
+		ec.add("Majnu");
+		ec.add("Uday");
+		ec.add("Ghungroo");
+		ec.add("Rdx");
+		Collection<String> me = new ArrayList<>();
+		me.add("Boman0");
+		
+		Collection<String> eng = new ArrayList<>();
+		eng.addAll(cs);
+		eng.addAll(ec);
+		eng.addAll(me);
+		
+		System.err.println(eng.size());
+		System.out.println(eng.isEmpty());
+	}
+}

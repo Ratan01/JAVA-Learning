@@ -1,0 +1,144 @@
+- Multithreading in Java allows the concurrent execution of two or more threads, enabling efficient use of 
+  CPU and improving application performance. Here’s a detailed explanation with examples:
+  
+Key Concepts in Java Multithreading:
+-----------------------------------
+Thread
+------
+- A thread is a lightweight process and the smallest unit of processing.
+- Java provides the Thread class and the Runnable interface to create threads.
+
+Main Thread:
+------------
+- Every Java program has a default main thread that starts the execution of the program.
+
+Lifecycle of a Thread:
+----------------------
+New: When a thread is created but not yet started.
+Runnable: When start() is called, the thread is ready to run but might not run immediately.
+Running: The thread scheduler selects the thread for execution.
+Blocked/Waiting: The thread is waiting for resources or other threads to finish.
+Terminated: The thread finishes its task or is terminated.
+
+Thread States:
+-------------
+NEW
+RUNNABLE
+BLOCKED
+WAITING
+TIMED_WAITING
+TERMINATED
+
+Thread Methods:
+---------------
+start(): Starts the thread.
+run(): Contains the thread’s code (called internally by start()).
+sleep(milliseconds): Puts the thread to sleep for the specified time.
+join(): Waits for a thread to die.
+setPriority(int): Sets the priority of a thread.
+getPriority(): Returns the priority of a thread.
+setName(String): Sets the name of a thread.
+getName(): Returns the name of a thread.
+isAlive(): Checks if the thread is alive.
+===============================================================================================================
+Creating Threads in Java:
+-------------------------
+By Extending Thread Class:
+--------------------------
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        System.out.println("Thread is running: " + Thread.currentThread().getName());
+    }
+}
+
+public class ThreadExample {
+    public static void main(String[] args) {
+        MyThread thread1 = new MyThread();
+        thread1.start(); // Starts the thread
+    }
+}
+---------------------------------------------------------------------------------------------
+By Implementing Runnable Interface:
+-----------------------------------
+class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("Thread is running: " + Thread.currentThread().getName());
+    }
+}
+
+public class RunnableExample {
+    public static void main(String[] args) {
+        Thread thread = new Thread(new MyRunnable());
+        thread.start();
+    }
+}
+------------------------------------------------------------------------------------
+Using Lambda Expressions:
+-------------------------
+public class LambdaExample {
+    public static void main(String[] args) {
+        Thread thread = new Thread(() -> {
+            System.out.println("Thread is running: " + Thread.currentThread().getName());
+        });
+        thread.start();
+    }
+}
+=================================================================================================================
+Synchronization
+---------------
+- To prevent thread interference or inconsistency, synchronization is used.
+
+Synchronized Method:
+-------------------
+class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+public class SynchronizedExample {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Final count: " + counter.getCount());
+    }
+}
+---------------------------------------------------------------------------------------------------
+Synchronized Block:
+-------------------
+public void increment() {
+    synchronized (this) {
+        count++;
+    }
+}
+----------------------------------------------------------------------------------------------------
+
+
+
+

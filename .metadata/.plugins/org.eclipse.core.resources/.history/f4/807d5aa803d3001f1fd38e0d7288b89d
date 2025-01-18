@@ -1,0 +1,20 @@
+package com.java.rk.junit;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+public class CalculatorTest {
+
+    @Test
+    void testAddition() {
+        // Arrange
+        Calculator calculator = new Calculator();
+
+        // Act
+        int result = calculator.add(2, 3);
+
+        // Assert
+        assertEquals(5, result, "The addition method should return the correct sum.");
+    }
+}

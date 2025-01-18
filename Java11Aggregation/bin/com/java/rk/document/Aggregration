@@ -1,0 +1,64 @@
+Aggregation HAS-A:
+------------------
+- Aggregation in Java is a concept of object-oriented programming that represents a "HAS-A" relationship between objects. 
+- It is a form of association where one object contains a reference to another object. 
+- Aggregation allows one class to use the properties and methods of another class without inheriting it.
+
+Key Characteristics of Aggregation:
+-----------------------------------
+- Weak Relationship: Aggregation represents a weak relationship between the two objects. If one object is deleted, 
+  the other can still exist independently.
+- HAS-A Relationship: It is used to represent a "HAS-A" relationship. For example, a Car has an Engine.
+- Reusability: Aggregation promotes code reuse by enabling objects to be composed of other objects.
+
+Advantages of Aggregation:
+--------------------------
+- Improved Code Organization: Helps in dividing complex systems into smaller, manageable classes.
+- Code Reusability: Promotes reuse of classes in different contexts.
+- Loosely Coupled Classes: Aggregation allows for loosely coupled relationships, making code easier to maintain.
+
+Difference Between Aggregation and Composition:
+-----------------------------------------------
+- While aggregation represents a weak relationship, composition is a stronger form of association where the contained
+  object cannot exist independently of the containing object. 
+- For example, a "house" has "rooms" (composition). If the house is destroyed, the rooms are destroyed too.
+=======================================================================================================================
+// Class representing Engine
+class Engine {
+    private String type;
+
+    public Engine(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
+
+// Class representing Car
+class Car {
+    private String model;
+    private Engine engine; // Aggregation: Car HAS-A Engine
+
+    public Car(String model, Engine engine) {
+        this.model = model;
+        this.engine = engine;
+    }
+
+    public void displayDetails() {
+        System.out.println("Car Model: " + model);
+        System.out.println("Engine Type: " + engine.getType());
+    }
+}
+
+// Main class to demonstrate Aggregation
+public class AggregationExample {
+    public static void main(String[] args) {
+        Engine engine = new Engine("V8");
+        Car car = new Car("Mustang", engine);
+
+        car.displayDetails();
+    }
+}
+==========================================================================================================

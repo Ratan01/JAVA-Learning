@@ -1,0 +1,5 @@
+Global variable:
+----------------
+- A variable which is declare inside class and outside of method or constructor is known as global variable.
+- If Global variable is static , then it is called class variable .
+- If Global variable is non static , then it is called Instance variable.

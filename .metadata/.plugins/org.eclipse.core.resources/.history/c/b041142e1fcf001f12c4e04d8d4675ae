@@ -1,0 +1,69 @@
+- The StringBuilder class in Java is a mutable sequence of characters similar to StringBuffer, 
+  but it is not thread-safe. 
+- It was introduced in Java 5 as a faster alternative to StringBuffer for single-threaded environments.
+
+Key Features of StringBuilder:
+------------------------------
+Mutability:
+- StringBuilder objects can be modified without creating new ones.
+- Operations like append, insert, replace, or delete modify the same object.
+
+Performance:
+- StringBuilder is faster than StringBuffer because it is not synchronized, making it ideal for single-threaded 
+  applications.
+  
+Dynamic Size:
+- The size of a StringBuilder grows dynamically as content is added.
+
+Default Capacity:
+- The default capacity is 16 characters. It increases automatically as needed.
+
+Common Constructors:
+--------------------
+Default Constructor:
+ StringBuilder sb = new StringBuilder(); // Default capacity: 16
+ 
+With Initial Capacity:
+ StringBuilder sb = new StringBuilder(50); // Capacity: 50
+ 
+With Initial String:
+ StringBuilder sb = new StringBuilder("Hello");
+ 
+Commonly Used Methods:
+----------------------
+Append: Appends the specified string to the end of the sequence.
+  StringBuilder sb = new StringBuilder("Hello");
+  sb.append(" World");
+  System.out.println(sb); // Output: Hello World
+  
+Insert: Inserts a string at the specified position.
+  sb.insert(5, " Java");
+  System.out.println(sb); // Output: Hello Java World
+  
+Replace: Replaces characters in the specified range with a given string.
+  sb.replace(6, 10, "Python");
+  System.out.println(sb); // Output: Hello Python World
+  
+Delete: Removes characters in the specified range.
+  sb.delete(6, 13);
+  System.out.println(sb); // Output: Hello World
+  
+Reverse: Reverses the sequence of characters.
+  sb.reverse();
+  System.out.println(sb); // Output: dlroW olleH
+  
+Capacity: Returns the current capacity of the StringBuilder.
+  System.out.println(sb.capacity()); // Default: 16 or more
+  
+Ensure Capacity: Ensures the capacity is at least equal to the specified minimum.
+  sb.ensureCapacity(50);
+  System.out.println(sb.capacity()); // Output: 50 or more
+  
+  
+  
+  
+  
+  
+
+
+

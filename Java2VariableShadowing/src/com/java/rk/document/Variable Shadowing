@@ -1,0 +1,4 @@
+Variable Shadowing:
+------------------
+- when local variable and global variable have same name that is called variable shadowing.
+- It can be avoid by this keyword.

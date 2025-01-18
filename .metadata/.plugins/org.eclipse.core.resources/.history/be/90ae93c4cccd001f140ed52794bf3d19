@@ -1,0 +1,15 @@
+TreeMap (sorted, uses Red-Black Tree):
+--------------------------------------
+- A TreeMap in Java is part of the java.util package and implements the NavigableMap and SortedMap interfaces. 
+- It stores key-value pairs in a sorted order of keys, based on the natural ordering of the keys or a custom 
+  comparator provided at the time of creation. 
+- Internally, it uses a Red-Black Tree, a self-balancing binary search tree, to ensure log(n) time complexity for 
+  key-based operations.
+  
+Key Features of TreeMap:
+------------------------
+- Sorted Order: Maintains keys in ascending natural order or according to a custom comparator.
+- No Null Keys: Does not allow null keys but allows multiple null values.
+- Performance: Offers O(log n) time complexity for get(), put(), and remove() operations.
+- Navigable Map Features: Provides methods to navigate keys and entries (e.g., ceilingKey, floorKey).
+- Thread Safety: Not synchronized. Use Collections.synchronizedMap() for thread-safe operations.

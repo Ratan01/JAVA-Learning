@@ -1,0 +1,23 @@
+- In Java, Strings are immutable, meaning once a String object is created, its value cannot be changed. 
+- Any modification to a String results in the creation of a new String object.
+
+Key Points about Immutable Strings:
+-----------------------------------
+Immutability:
+- Once a String object is created, its content cannot be altered.
+- Operations like concatenation, substring, or replacement return a new String object without modifying the original one.
+
+Benefits of Immutability:
+- Thread-safety: Immutable objects can be safely shared between multiple threads without synchronization.
+- Caching: Java optimizes memory usage by reusing String literals through the String Pool.
+- Security: Strings are often used for sensitive data (e.g., file paths, configuration settings). 
+  Immutability prevents accidental or malicious modifications.
+  
+String Pool:
+- Java maintains a pool of String literals.
+- When you create a String literal, Java checks the pool. If an identical String already exists, the reference
+  is reused instead of creating a new object.
+  String s1 = "Hello";
+  String s2 = "Hello";
+  System.out.println(s1 == s2); // true (same reference from the pool)
+  

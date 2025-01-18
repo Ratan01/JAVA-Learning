@@ -1,0 +1,17 @@
+
+j	java:S106"9Replace this use of System.out or System.err by a logger.(°â³Ñ8£àıÔÂ2HRMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(Õï´ûüÿÿÿÿ8£àıÔÂ2HRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(î÷Çş8£àıÔÂ2HRMAJORZ
+CODE_SMELL
+m
+java:S1117	"6Rename "age" which hides the field declared at line 5.(ˆû±¦úÿÿÿÿ8£àıÔÂ2H
+RMAJORZ
+CODE_SMELL
+o	java:S106
+"9Replace this use of System.out or System.err by a logger.(ë÷‹Ûÿÿÿÿÿ8£àıÔÂ2HRMAJORZ
+CODE_SMELL
+n
+java:S1117"7Rename "name" which hides the field declared at line 4.(ó›Äûÿÿÿÿ8£àıÔÂ2H	RMAJORZ
+CODE_SMELL

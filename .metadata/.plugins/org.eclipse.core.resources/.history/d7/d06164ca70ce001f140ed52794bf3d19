@@ -1,0 +1,5 @@
+String:
+-------
+- In Java, a String is a class in the java.lang package that represents a sequence of characters. 
+- Strings are immutable in Java, meaning that once a String object is created, its value cannot be changed. 
+- If you modify a String, a new String object is created.

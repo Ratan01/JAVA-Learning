@@ -1,0 +1,83 @@
+HashMap (unordered, uses hashing):
+----------------------------------
+- A HashMap in Java is part of the java.util package and implements the Map interface. 
+- It is used to store key-value pairs, where each key is unique, and values can be associated with these keys. 
+- Internally, it uses a hash table for storing the data, ensuring efficient retrieval based on the hash code of the key.
+
+Key Features of HashMap:
+------------------------
+- Key-Value Pairs: Stores data in the form of key-value pairs.
+- Unique Keys: Each key must be unique, but values can be duplicated.
+- Allows Null: Allows one null key and multiple null values.
+- Not Ordered: Does not guarantee the order of keys or entries.
+- Performance: Offers O(1) average time complexity for get() and put() operations.
+- Not Synchronized: It is not thread-safe but can be made synchronized using Collections.synchronizedMap().
+
+Commonly Used Methods:
+----------------------
+Adding and Updating Entries:
+- put(K key, V value): Associates the specified value with the specified key. If the key already exists, 
+  it updates the value.
+- putIfAbsent(K key, V value): Adds the key-value pair only if the key is not already present.
+
+Accessing Entries:
+- get(Object key): Retrieves the value associated with the specified key, or null if the key does not exist.
+- getOrDefault(Object key, V defaultValue): Returns the value associated with the key or a default value if the key is 
+  not found.
+  
+Removing Entries:
+- remove(Object key): Removes the mapping for the specified key.
+- remove(Object key, Object value): Removes the entry only if the key maps to the specified value.
+ 
+Checking Existence:
+- containsKey(Object key): Checks if the map contains the specified key.
+- containsValue(Object value): Checks if the map contains the specified value.
+
+Other Methods:
+- size(): Returns the number of key-value pairs in the map.
+- isEmpty(): Checks if the map is empty.
+- clear(): Removes all entries from the map.
+- keySet(): Returns a set of all keys in the map.
+- values(): Returns a collection of all values in the map.
+- entrySet(): Returns a set of key-value pairs as Map.Entry objects.
+
+When to Use HashMap:
+- Efficient Lookups: When you need fast retrieval of values based on keys.
+- Key-Value Association: When you need to map unique keys to values.
+- No Order Requirement: When the order of elements doesn't matter.
+====================================================================================================================
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Creating a HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+
+        // Adding key-value pairs
+        map.put("Alice", 30);
+        map.put("Bob", 25);
+        map.put("Charlie", 35);
+
+        // Accessing values
+        System.out.println("Value for Alice: " + map.get("Alice"));
+
+        // Updating a value
+        map.put("Alice", 31);
+        System.out.println("Updated value for Alice: " + map.get("Alice"));
+
+        // Checking key and value existence
+        System.out.println("Contains key 'Bob': " + map.containsKey("Bob"));
+        System.out.println("Contains value 35: " + map.containsValue(35));
+
+        // Removing a key
+        map.remove("Bob");
+        System.out.println("Map after removal: " + map);
+
+        // Iterating through the map
+        System.out.println("Entries in the map:");
+        for (HashMap.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+================================================================================================================

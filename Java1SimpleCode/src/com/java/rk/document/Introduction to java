@@ -1,0 +1,51 @@
+Introduction to java
+--------------------
+
+Program:- Set of instruction for a platform.
+
+Java - Platform Independent
+                 High Level
+                 Object Oriented
+
+WORA Concept -write once read everywhere.
+
+1. JVM (Java Virtual Machine):
+-----------------------------
+Purpose: It is a virtual machine that runs Java bytecode. It acts as a runtime environment for 
+         executing Java applications.
+         
+Key Features:
+- Converts compiled Java bytecode (.class files) into machine code for the host operating system.
+- Provides platform independence (Java’s “Write Once, Run Anywhere” principle).
+- Includes a garbage collector for automatic memory management.
+
+Components:
+- Class Loader: Loads Java class files into the JVM.
+- Execution Engine: Executes the bytecode instructions.
+- Memory Areas: Manages runtime memory like heap, stack, method area, and more.
+
+2. JRE (Java Runtime Environment)
+---------------------------------
+Purpose: It is the environment required to run Java applications.
+
+Key Features:
+- Includes the JVM and the libraries/classes necessary for running Java applications.
+- Suitable for users who want to run pre-built Java applications but not for developing them.
+
+Components:
+- JVM
+- Java class libraries (core classes like java.lang, java.util, etc.).
+- Supporting files like configuration files.
+
+3. JDK (Java Development Kit)
+-----------------------------
+Purpose: It is a complete development kit for building, debugging, and running Java applications.
+
+Key Features:
+- Includes tools for Java development, such as a compiler, debugger, and documentation generator.
+- Contains the JRE for testing and running Java applications.
+
+Components:
+- JRE (with JVM and libraries).
+- Java Compiler (javac): Converts source code (.java) into bytecode (.class).
+- Tools: For monitoring, debugging, and packaging applications (e.g., jdb, javadoc, jar).

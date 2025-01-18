@@ -1,0 +1,29 @@
+=> final
+--------
+Purpose: A keyword used to declare constants, restrict inheritance, or prevent method overriding.
+
+Usage:
+------
+With Variables:
+- When a variable is declared final, its value cannot be changed once assigned.
+
+  final int MAX_VALUE = 100;
+  MAX_VALUE = 200; // Compilation Error
+  
+With Methods:
+- A final method cannot be overridden in a subclass.
+
+class Parent {
+    final void display() {
+        System.out.println("This is a final method.");
+    }
+}
+
+class Child extends Parent {
+    void display() { // Compilation Error
+        System.out.println("Cannot override final method.");
+    }
+}
+
+With Classes:
+- A final class cannot be extended.

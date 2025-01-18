@@ -1,0 +1,22 @@
+- Wrapper Classes: Java provides wrapper classes for primitive data types. These classes allow primitives (like int, 
+  double, etc.) to be treated as objects. For example:
+
+int → Integer
+double → Double
+boolean → Boolean
+
+- These are used in cases where an object is needed instead of a primitive, such as when working with collections 
+  like ArrayList or performing autoboxing and unboxing.
+  
+public class WrapperExample {
+    public static void main(String[] args) {
+        // Autoboxing: Converting a primitive to a wrapper object
+        Integer num = 10;
+        System.out.println("Wrapper Integer: " + num);
+
+        // Unboxing: Converting a wrapper object to a primitive
+        int primitiveNum = num;
+        System.out.println("Primitive int: " + primitiveNum);
+    }
+}
+  

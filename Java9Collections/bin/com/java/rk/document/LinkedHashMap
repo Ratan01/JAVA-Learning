@@ -1,0 +1,98 @@
+LinkedHashMap (maintains insertion order):
+------------------------------------------
+- A LinkedHashMap in Java is a part of the java.util package and extends the HashMap class. 
+- It maintains a linked list of entries, ensuring that the elements are stored in the order in which they were inserted. 
+- This makes it particularly useful when order matters, while still providing the fast access of a hash table.
+
+Key Features of LinkedHashMap:
+------------------------------
+- Insertion Order Maintained: Preserves the order of keys as they are inserted.
+- Custom Access Order: Can be configured to maintain access order instead of insertion order by using the 
+  constructor with the accessOrder parameter.
+- Allows Null: Permits one null key and multiple null values.
+- erformance: Provides O(1) time complexity for get() and put() operations.
+- Not Synchronized: It is not thread-safe, but you can synchronize it externally using Collections.synchronizedMap().
+
+Commonly Used Methods:
+----------------------
+LinkedHashMap inherits most of its methods from HashMap, with the same behavior. The key difference lies in the 
+ordering of entries.
+
+Adding and Updating Entries:
+- put(K key, V value): Adds a key-value pair or updates the value if the key already exists.
+- putIfAbsent(K key, V value): Adds the key-value pair only if the key is not already present.
+
+Accessing Entries:
+- get(Object key): Retrieves the value associated with the specified key.
+- getOrDefault(Object key, V defaultValue): Returns the value or a default if the key is not found.
+
+Removing Entries:
+- remove(Object key): Removes the mapping for the specified key.
+- remove(Object key, Object value): Removes the mapping only if it matches the given key and value.
+
+Checking Existence:
+- containsKey(Object key): Checks if the map contains the specified key.
+- containsValue(Object value): Checks if the map contains the specified value.
+
+Special Constructor:
+--------------------
+- LinkedHashMap provides a constructor to specify whether to maintain insertion order or access order:
+
+LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
+
+accessOrder Parameter:
+- false (default): Maintains insertion order.
+- true: Maintains access order (entries are reordered based on their access).
+
+When to Use LinkedHashMap:
+--------------------------
+- Order Matters: When you need to preserve the insertion order of elements or the access order.
+- Efficient Lookups: Offers the same fast access performance as HashMap.
+- LRU Cache Implementation: Its ability to maintain access order makes it suitable for Least Recently Used (LRU) caches.
+===============================================================================================================
+import java.util.LinkedHashMap;
+
+public class LinkedHashMapExample {
+    public static void main(String[] args) {
+        // Creating a LinkedHashMap
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+
+        // Adding key-value pairs
+        map.put("Alice", 30);
+        map.put("Bob", 25);
+        map.put("Charlie", 35);
+
+        // Displaying the map
+        System.out.println("LinkedHashMap: " + map);
+
+        // Accessing elements
+        System.out.println("Value for Bob: " + map.get("Bob"));
+
+        // Removing an element
+        map.remove("Alice");
+        System.out.println("After removal: " + map);
+    }
+}
+====================================================================================================
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class AccessOrderExample {
+    public static void main(String[] args) {
+        // Creating a LinkedHashMap with access order
+        LinkedHashMap<String, Integer> map = new LinkedHashMap<>(16, 0.75f, true);
+
+        // Adding key-value pairs
+        map.put("Alice", 30);
+        map.put("Bob", 25);
+        map.put("Charlie", 35);
+
+        // Accessing elements
+        map.get("Alice");
+        map.get("Charlie");
+
+        // Displaying the map
+        System.out.println("LinkedHashMap (access order): " + map);
+    }
+}
+9=========================================================================================================

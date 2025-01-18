@@ -1,0 +1,35 @@
+Global variable:
+----------------
+- A variable which is declare inside class and outside of method or constructor is known as global variable.
+- If Global variable is static , then it is called class variable .
+- If Global variable is non static , then it is called Instance variable.
+
+Instance variable:
+- Accessible throughout the class in which they are declared.
+- Can be used by all methods in the class.
+
+Static variable:
+- static variable accessed directly in a static method.
+- Can be used by all methods in the class.
+
+---------------------------------------------------------------------------------------------------------------
+Feature	                   Static Variable	                                   Instance Variable
+---------------------------------------------------------------------------------------------------------------
+Belongs To	                   Class	                                             Object
+Memory Allocation	   Once per class (method area)	                          Once per object (heap)
+Shared	                  Shared by all objects	                            Separate copy for each object
+Access	              Accessed using class name or object	                 Accessed only via an object
+Lifetime	            Until the class is unloaded	                     Until the object is garbage collected
+----------------------------------------------------------------------------------------------------------------
+
+Local variable:
+--------------
+- Local variables are defined within the body of a method, constructor, or block (e.g., loops, if-statements).
+- The scope of a local variable is limited to the block in which it is declared.
+- It cannot be accessed outside that block.
+- Local variables are not initialized with default values.
+- You must initialize them explicitly before use.
+- Local variables are used to store temporary data required for method execution.
+- Method parameters are also treated as local variables within the method.
+- Local variables are essential for managing temporary data within methods or blocks, providing 
+  encapsulated, efficient memory usage for short-lived operations.

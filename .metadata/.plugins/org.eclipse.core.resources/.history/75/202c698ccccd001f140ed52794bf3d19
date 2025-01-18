@@ -1,0 +1,7 @@
+TreeMap (sorted, uses Red-Black Tree):
+--------------------------------------
+- A TreeMap in Java is part of the java.util package and implements the NavigableMap and SortedMap interfaces. 
+- It stores key-value pairs in a sorted order of keys, based on the natural ordering of the keys or a custom 
+  comparator provided at the time of creation. 
+- Internally, it uses a Red-Black Tree, a self-balancing binary search tree, to ensure log(n) time complexity for 
+  key-based operations.

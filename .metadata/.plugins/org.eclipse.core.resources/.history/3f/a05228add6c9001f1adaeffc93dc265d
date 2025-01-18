@@ -1,0 +1,10 @@
+Methods of List Interface:
+--------------------------
+
+1. List<E> subList(int fromIndex, int toIndex);
+2. ListIterator<E> listIterator(int index);
+3. int lastIndexOf(Object o);
+4. int indexOf(Object o);
+5. void add(int index, E element);
+6. E set(int index, E element);
+7. E get(int index);

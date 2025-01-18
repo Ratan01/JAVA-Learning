@@ -1,0 +1,30 @@
+- Multithreading in Java allows the concurrent execution of two or more threads, enabling efficient use of 
+  CPU and improving application performance. Here’s a detailed explanation with examples:
+  
+Key Concepts in Java Multithreading:
+-----------------------------------
+Thread
+------
+- A thread is a lightweight process and the smallest unit of processing.
+- Java provides the Thread class and the Runnable interface to create threads.
+
+Main Thread:
+------------
+- Every Java program has a default main thread that starts the execution of the program.
+
+Lifecycle of a Thread:
+----------------------
+New: When a thread is created but not yet started.
+Runnable: When start() is called, the thread is ready to run but might not run immediately.
+Running: The thread scheduler selects the thread for execution.
+Blocked/Waiting: The thread is waiting for resources or other threads to finish.
+Terminated: The thread finishes its task or is terminated.
+
+Thread States:
+-------------
+NEW
+RUNNABLE
+BLOCKED
+WAITING
+TIMED_WAITING
+TERMINATED

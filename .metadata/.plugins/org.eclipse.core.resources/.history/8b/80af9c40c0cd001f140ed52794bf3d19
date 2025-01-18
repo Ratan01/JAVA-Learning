@@ -1,0 +1,15 @@
+TreeSet (sorted set, uses Red-Black Tree):
+------------------------------------------
+- A TreeSet in Java is a part of the java.util package and implements the NavigableSet interface, which extends 
+  the Set interface. 
+- It is backed by a TreeMap and stores elements in a sorted order. 
+- The sorting can be either the natural order of the elements or a custom order defined by a Comparator.
+
+Key Features of TreeSet:
+------------------------
+- Unique Elements: Like all sets, it does not allow duplicate elements.
+- Sorted Order: Maintains elements in ascending (natural) order by default. A custom sorting order can be 
+  defined using a Comparator.
+- No Null Elements: TreeSet does not allow null elements. Attempting to add a null value results in a NullPointerException.
+- Efficient Operations: Provides O(log n) time complexity for basic operations like add, remove, and contains.
+- NavigableSet Features: Offers methods to navigate through elements (e.g., lower, higher, floor, ceiling).

@@ -1,0 +1,6 @@
+Feature	          String	        StringBuffer	        StringBuilder
+----------------------------------------------------------------------------
+Mutability	     Immutable	          Mutable	              Mutable
+Thread-Safe	        No	          Yes (synchronized)	        No
+Performance	   Fast (constant)	      Slower	              Faster
+Use Case	   Read-only data	    Multi-threaded	       Single-threaded

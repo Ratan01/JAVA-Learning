@@ -1,0 +1,23 @@
+package com.java.rk.constructor;
+
+public class ParameterizeConstructor {
+	int price;
+	String color;
+	
+	//custom or parameterize constructor
+	public ParametrizeConstructor(int p, String c) {
+		price=p;
+		color=c;
+	}
+	
+	public static void main(String[] args) {
+		ParametrizeConstructor p1 = new ParametrizeConstructor(1400, "Blue");
+		ParametrizeConstructor p2 = new ParametrizeConstructor(2300, "Black");
+		
+		System.out.println(p1.price);
+		System.out.println(p1.color);
+		System.err.println(p2.price);
+		System.out.println(p2.color);
+	}
+
+}

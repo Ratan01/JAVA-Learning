@@ -1,0 +1,34 @@
+Exception:
+----------
+- Exception in Java refers to an event that disrupts the normal flow of a program's execution. 
+- Exceptions are used to handle errors or unexpected behavior gracefully, allowing the program to continue 
+  running or terminate gracefully instead of crashing.
+  
+Key Concepts in Java Exceptions:
+--------------------------------
+Exception Hierarchy:
+- All exceptions in Java are part of the Throwable class hierarchy.
+
+Throwable has two main subclasses:
+----------------------------------
+- Error: Indicates serious problems that applications should not handle (e.g., OutOfMemoryError, 
+  StackOverflowError).
+-Exception: Represents conditions that a program might want to handle.
+
+Checked vs. Unchecked Exceptions:
+---------------------------------
+Checked Exceptions:
+- Exceptions that must be declared in the method signature using throws or handled using a try-catch block.
+- Examples: IOException, SQLException.
+
+Unchecked Exceptions:
+- Exceptions that do not need to be declared or handled explicitly.
+- Examples: ArithmeticException, NullPointerException.
+
+Common Exception Classes:
+-------------------------
+- ArithmeticException: For illegal arithmetic operations, like division by zero.
+- NullPointerException: When an application tries to use a null object reference.
+- ArrayIndexOutOfBoundsException: When accessing invalid array indices.
+- IOException: For input/output failures.
+

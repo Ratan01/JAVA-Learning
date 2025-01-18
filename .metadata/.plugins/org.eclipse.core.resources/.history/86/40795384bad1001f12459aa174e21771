@@ -1,0 +1,118 @@
+=> final
+--------
+Purpose: A keyword used to declare constants, restrict inheritance, or prevent method overriding.
+
+Usage:
+------
+With Variables:
+- When a variable is declared final, its value cannot be changed once assigned.
+
+  final int MAX_VALUE = 100;
+  MAX_VALUE = 200; // Compilation Error
+  
+With Methods:
+- A final method cannot be overridden in a subclass.
+
+class Parent {
+    final void display() {
+        System.out.println("This is a final method.");
+    }
+}
+
+class Child extends Parent {
+    void display() { // Compilation Error
+        System.out.println("Cannot override final method.");
+    }
+}
+
+With Classes:
+- A final class cannot be extended.
+
+final class FinalClass {
+}
+
+class SubClass extends FinalClass { // Compilation Error
+}
+==========================================================================================
+=> finally:
+----------
+Purpose: A block used for cleanup code in exception handling, ensuring that specific code executes regardless 
+  of whether an exception is thrown or caught.
+  
+Usage:
+- The finally block is executed after the try block, even if an exception is thrown.
+- It is typically used to close resources like files, database connections, etc.
+
+public class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("This is the finally block.");
+        }
+    }
+}
+// Output:
+// Exception caught: / by zero
+// This is the finally block.
+====================================================================================================
+=> finalize:
+------------
+Purpose: A method in the Object class that is called by the Garbage Collector before an object is destroyed.
+
+Usage:
+- The finalize method is used to perform cleanup operations before an object is garbage collected.
+- However, its use is discouraged as Garbage Collection is non-deterministic, meaning you cannot predict when it will 
+  be executed.
+- It is overridden in a class to clean up resources (e.g., closing file streams).
+
+public class FinalizeExample {
+    protected void finalize() throws Throwable {
+        System.out.println("Finalize method called.");
+    }
+
+    public static void main(String[] args) {
+        FinalizeExample obj = new FinalizeExample();
+        obj = null; // Eligible for garbage collection
+        System.gc(); // Request Garbage Collection
+    }
+}
+// Output (may vary):
+// Finalize method called.
+==============================================================================================================
+Key Differences at a Glance:
+-------------------------------
+Feature	            final	                                 f/inally	                            finalize
+------------------------------------------------------------------------------------------------------------------------
+Purpose     Restricts variable, method, or class	Ensures cleanup code is executed	Cleanup before object is destroyed
+Usage Context	Variables, methods, classes	             Exception handling	                 Garbage collection
+Type	              Keyword	                                Block	                              Method
+Execution Time  	Compile-time	                          Runtime	                   Before garbage collection
+====================================================================================================================
+
+Use final:
+- When you want constants, or to prevent method overriding or inheritance.
+
+Use finally:
+- To close or release resources in a try-catch-finally block.
+
+Avoid finalize:
+- Use alternatives like try-with-resources or explicit resource management, as finalize is deprecated in Java 9 
+  and later.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+HashSet:
+-------
+- A HashSet in Java is a collection class provided by the java.util package that implements the Set interface. 
+- It is backed by a HashMap, and it is designed to store unique elements, meaning duplicate values are not allowed. 
+- The HashSet provides constant-time performance for basic operations like add, remove, and contains, assuming a good 
+  hash function.
+  
+Key Features of HashSet:
+-----------------------
+- Unique Elements: Does not allow duplicate elements.
+- No Order Guarantee: The elements in a HashSet are not stored in any specific order (neither insertion order 
+  nor sorted order).
+- Allows Null Value: It permits one null element.
+- Fast Operations: Provides O(1) time complexity for add, remove, and contains operations.
+- Non-Synchronized: HashSet is not thread-safe, but you can wrap it using Collections.synchronizedSet() for 
+  thread safety.
+  
+Commonly Used Methods:
+---------------------
+Adding Elements:
+- add(E e): Adds the specified element to the set if it is not already present.
+
+Removing Elements:
+- remove(Object o): Removes the specified element if it exists in the set.
+- clear(): Removes all elements from the set.
+
+Checking for Elements:
+- contains(Object o): Returns true if the set contains the specified element.
+- isEmpty(): Checks if the set is empty.
+
+Size:
+- size(): Returns the number of elements in the set.
+
+Iteration:
+- You can iterate over the elements using an Iterator or enhanced for-each loop.
+
+When to Use HashSet:
+-------------------
+- When you need to store unique elements without caring about the order.
+- When performance for search and insert is a priority.
+- If duplicates need to be prevented automatically.
+==============================================================================================================
+
+import java.util.HashSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        // Creating a HashSet
+        HashSet<String> set = new HashSet<>();
+
+        // Adding elements
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Cherry");
+        set.add("Apple"); // Duplicate element, will not be added
+
+        // Displaying the HashSet
+        System.out.println("HashSet: " + set);
+
+        // Checking for an element
+        System.out.println("Contains 'Banana': " + set.contains("Banana"));
+
+        // Removing an element
+        set.remove("Cherry");
+        System.out.println("After removal: " + set);
+
+        // Iterating through the HashSet
+        System.out.println("Iterating through HashSet:");
+        for (String fruit : set) {
+            System.out.println(fruit);
+        }
+
+        // Checking the size
+        System.out.println("Size: " + set.size());
+
+        // Clearing the HashSet
+        set.clear();
+        System.out.println("Is HashSet empty? " + set.isEmpty());
+    }
+}
+=================================================================================================

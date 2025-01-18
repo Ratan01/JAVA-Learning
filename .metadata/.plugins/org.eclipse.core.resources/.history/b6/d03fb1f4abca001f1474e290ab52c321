@@ -1,0 +1,121 @@
+Abstraction:
+------------
+- Abstraction is the process or mechanism of hiding the internal implementation details from the consumer 
+  by exposing only necessary functionalities. 
+- In java we can achieve abstraction either by using abstract class or by using Interface. 
+- Abstraction is one of the important object oriented principle. 
+- API is the best example for abstraction.
+
+Benefits of Abstraction:
+* Reduces Complexity: Focus on what the object does, not how it does it.
+* Promotes Reusability: Abstract methods and interfaces provide reusable contracts.
+* Enhances Maintainability: Implementation changes are isolated from the parts of the program that use the 
+  abstraction.
+==============================================================================================================
+Feature	                   Abstract Class	                         Interface
+-----------------------------------------------------------------------------------------
+Methods	      Can have both abstract and concrete methods	Only abstract methods (till Java 7). Can have default/static methods (Java 8+).
+Constructors           Can have constructors                	Cannot have constructors
+Multiple Inheritance	Cannot be extended by multiple classes	Can be implemented by multiple classes
+Modifiers	 Abstract methods can have any access modifier	    Abstract methods are implicitly public
+===============================================================================================================
+Example of Abstraction Using an Abstract Class:
+-----------------------------------------------
+// Abstract class
+abstract class Animal {
+    // Abstract method (no implementation)
+    public abstract void makeSound();
+
+    // Concrete method (has implementation)
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+// Subclass that extends the abstract class
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Woof! Woof!");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow! Meow!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        dog.makeSound();  // Output: Woof! Woof!
+        dog.sleep();      // Output: Sleeping...
+
+        Animal cat = new Cat();
+        cat.makeSound();  // Output: Meow! Meow!
+        cat.sleep();      // Output: Sleeping...
+    }
+}
+=======================================================================================================
+Example of Abstraction Using an Interface:
+------------------------------------------
+// Interface
+interface Shape {
+    void draw();  // Abstract method
+    double calculateArea();
+}
+
+// Circle class implementing the Shape interface
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Rectangle class implementing the Shape interface
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle(5);
+        circle.draw();
+        System.out.println("Circle Area: " + circle.calculateArea());
+
+        Shape rectangle = new Rectangle(4, 5);
+        rectangle.draw();
+        System.out.println("Rectangle Area: " + rectangle.calculateArea());
+    }
+}
+============================================================================================================

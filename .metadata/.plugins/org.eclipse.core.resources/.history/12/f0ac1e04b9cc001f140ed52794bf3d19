@@ -1,0 +1,6 @@
+HashSet:
+-------
+- A HashSet in Java is a collection class provided by the java.util package that implements the Set interface. 
+- It is backed by a HashMap, and it is designed to store unique elements, meaning duplicate values are not allowed. 
+- The HashSet provides constant-time performance for basic operations like add, remove, and contains, assuming a good 
+  hash function.

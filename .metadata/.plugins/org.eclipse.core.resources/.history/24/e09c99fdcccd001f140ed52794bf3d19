@@ -1,0 +1,43 @@
+TreeMap (sorted, uses Red-Black Tree):
+--------------------------------------
+- A TreeMap in Java is part of the java.util package and implements the NavigableMap and SortedMap interfaces. 
+- It stores key-value pairs in a sorted order of keys, based on the natural ordering of the keys or a custom 
+  comparator provided at the time of creation. 
+- Internally, it uses a Red-Black Tree, a self-balancing binary search tree, to ensure log(n) time complexity for 
+  key-based operations.
+  
+Key Features of TreeMap:
+------------------------
+- Sorted Order: Maintains keys in ascending natural order or according to a custom comparator.
+- No Null Keys: Does not allow null keys but allows multiple null values.
+- Performance: Offers O(log n) time complexity for get(), put(), and remove() operations.
+- Navigable Map Features: Provides methods to navigate keys and entries (e.g., ceilingKey, floorKey).
+- Thread Safety: Not synchronized. Use Collections.synchronizedMap() for thread-safe operations.
+
+Commonly Used Methods:
+----------------------
+Adding and Updating Entries:
+- put(K key, V value): Adds a key-value pair or updates the value if the key already exists.
+
+Accessing Entries:
+- get(Object key): Retrieves the value associated with the specified key.
+- firstKey(): Returns the first (lowest) key.
+- lastKey(): Returns the last (highest) key.
+
+Removing Entries:
+- remove(Object key): Removes the mapping for the specified key.
+- pollFirstEntry(): Removes and returns the first entry.
+- pollLastEntry(): Removes and returns the last entry.
+
+Navigating Keys:
+- ceilingKey(K key): Returns the smallest key greater than or equal to the given key.
+- floorKey(K key): Returns the largest key less than or equal to the given key.
+- higherKey(K key): Returns the smallest key strictly greater than the given key.
+- lowerKey(K key): Returns the largest key strictly less than the given key.
+
+Other Methods:
+- size(): Returns the number of key-value pairs.
+- isEmpty(): Checks if the map is empty.
+- keySet(): Returns a set of all keys.
+- values(): Returns a collection of all values.
+- entrySet(): Returns a set of key-value pairs as Map.Entry objects.

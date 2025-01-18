@@ -1,7 +1,0 @@
-package com.java.rk.single;
-
-public class Dog {
-	void bark() {
-        System.out.println("The dog barks.");
-    }
-}

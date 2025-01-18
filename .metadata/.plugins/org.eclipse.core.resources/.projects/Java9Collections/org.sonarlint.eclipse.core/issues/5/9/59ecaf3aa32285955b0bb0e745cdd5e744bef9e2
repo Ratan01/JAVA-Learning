@@ -1,21 +1,0 @@
-
-p	java:S106 "9Replace this use of System.out or System.err by a logger.(¶ÔÕ¸şÿÿÿÿ8áŒéàÂ2H®RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(¶ÔÕ¸şÿÿÿÿ8íßàÂ2H¯RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(Éêùüÿÿÿÿ8ûéàÂ2H°RMAJORZ
-CODE_SMELL
-[
-java:S2201#"/The return value of "containsAll" must be used.(¼£–8¾Ş‰áÂ2H±RMAJORZBUG
-p	java:S106%"9Replace this use of System.out or System.err by a logger.(é Ğùÿÿÿÿ8§¤óàÂ2H²RMAJORZ
-CODE_SMELL
-s	java:S125'"<This block of commented-out lines of code should be removed.(ËµßÉüÿÿÿÿ8îÅ–áÂ2H³RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÑÕ‘úÿÿÿÿ8áŒéàÂ2HµRMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(‹Õ„äùÿÿÿÿ8ÏÜÛàÂ2H¶RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(¨‰ü¸ıÿÿÿÿ8ğ¼äàÂ2H·RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(Èà‘¤ûÿÿÿÿ8ÑÿæàÂ2H¸RMAJORZ
-CODE_SMELL

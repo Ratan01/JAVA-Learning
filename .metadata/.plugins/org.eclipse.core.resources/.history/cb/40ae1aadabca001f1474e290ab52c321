@@ -1,7 +1,0 @@
-Abstraction:
-------------
-- Abstraction is the process or mechanism of hiding the internal implementation details from the consumer 
-  by exposing only necessary functionalities. 
-- In java we can achieve abstraction either by using abstract class or by using Interface. 
-- Abstraction is one of the important object oriented principle. 
-- API is the best example for abstraction.

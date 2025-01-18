@@ -1,9 +1,0 @@
-
-o	java:S106"9Replace this use of System.out or System.err by a logger.(­ִ¨¡שÿÿÿÿ8‰׀Ùױֲ2H$RMAJORZ
-CODE_SMELL
-g
-java:S1854"5Remove this useless assignment to local variable "n".(המך8‰׀Ùױֲ2H%RMAJORZ
-CODE_SMELL
-X
-java:S1481"&Remove this unused "n" local variable.(המך8‰׀Ùױֲ2H&RMINORZ
-CODE_SMELL

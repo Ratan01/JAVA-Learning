@@ -1,5 +1,0 @@
-HashMap (unordered, uses hashing):
-----------------------------------
-- A HashMap in Java is part of the java.util package and implements the Map interface. 
-- It is used to store key-value pairs, where each key is unique, and values can be associated with these keys. 
-- Internally, it uses a hash table for storing the data, ensuring efficient retrieval based on the hash code of the key.

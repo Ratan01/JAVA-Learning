@@ -1,12 +1,0 @@
-
-n
-java:S1117"7Rename "name" which hides the field declared at line 4.(Â¨Ë’ùÿÿÿÿ8ÛÊñÔÂ2HRMAJORZ
-CODE_SMELL
-o	java:S106
-"9Replace this use of System.out or System.err by a logger.(ë÷‹Ûÿÿÿÿÿ8ÛÊñÔÂ2HRMAJORZ
-CODE_SMELL
-j	java:S106"9Replace this use of System.out or System.err by a logger.(°â³Ñ8ÛÊñÔÂ2HRMAJORZ
-CODE_SMELL
-m
-java:S1117	"6Rename "age" which hides the field declared at line 5.(ÿæï…üÿÿÿÿ8ÛÊñÔÂ2HRMAJORZ
-CODE_SMELL

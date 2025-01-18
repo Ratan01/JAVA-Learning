@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Dog.java&apos; to &apos;Java4Inheritence/src/com.java.rk.hierarchical&apos;&#x0D;&#x0A;- Original project: &apos;Java4Inheritence&apos;&#x0D;&#x0A;- Destination element: &apos;Java4Inheritence/src/com.java.rk.hierarchical&apos;&#x0D;&#x0A;- Original element: &apos;com.java.rk.single.Dog.java&apos;" description="Copy compilation unit" destination="/src&lt;com.java.rk.hierarchical" element1="/src&lt;com.java.rk.single{Dog.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1735892367120" units="1" version="1.0"/>
-</session>

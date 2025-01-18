@@ -1,8 +1,0 @@
-Hashtable (legacy, synchronized):
----------------------------------
-- A Hashtable in Java is part of the java.util package and implements the Map interface. 
-- It is one of the oldest implementations of a key-value pair storage in Java and provides synchronized operations, 
-  making it thread-safe for concurrent access. 
-- However, due to synchronization overhead, it is less efficient than alternatives like HashMap in single-threaded 
-  environments.
-

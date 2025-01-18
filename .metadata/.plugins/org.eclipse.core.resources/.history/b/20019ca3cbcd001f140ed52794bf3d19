@@ -1,5 +1,0 @@
-LinkedHashMap (maintains insertion order):
-------------------------------------------
-- A LinkedHashMap in Java is a part of the java.util package and extends the HashMap class. 
-- It maintains a linked list of entries, ensuring that the elements are stored in the order in which they were inserted. 
-- This makes it particularly useful when order matters, while still providing the fast access of a hash table.
